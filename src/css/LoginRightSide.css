@@ -8,20 +8,29 @@
     justify-content: center;
 }
 
-.login-rightside img{
+.login-rightside .container{
+    padding: 5px;
+}
+.login-rightside .container img {
     width: 498px;
     height: 415px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
-.login-rightside h2{
+.login-rightside h2 {
+    margin-bottom: 5px;
+    text-align: center;
     font-size: 24px;
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 }
 
 .login-rightside p{
     width: 545px;
     height: 80px;
     font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     text-align: center;
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import text from '../assets/logotext.png';
 import LoginRightSide from './LoginRightSide';
 import '../css/Login.css';
+import { Link } from 'react-router-dom';
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -60,7 +62,7 @@ const Login = () => {
             {passwordError && <p className='error'>{passwordError}</p>}
 
             <button type='submit'>Login</button>
-            <span>Forgot Password</span>
+            <span><Link to='/forgot-password' className='link'>Forgot Password</Link></span>
             <p>
               By clicking continue, you agree to our <strong>Terms of Service</strong> and{' '}
               <strong>Privacy Policy</strong>
