@@ -9,7 +9,12 @@
 }
 
 .login-rightside .container{
+    width: 95%;
+    height: auto;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
 }
 .login-rightside .container img {
     width: 498px;
@@ -28,9 +33,43 @@
 
 .login-rightside p{
     width: 545px;
-    height: 80px;
+    height: auto;
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     text-align: center;
+}
+
+@media screen and (max-width: 768px){
+   .login-rightside{
+    width: 50%;
+    display: none
+   } 
+
+.login-rightside .container{
+    width: 95%;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-rightside .container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+    }
+
+.login-rightside .container h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.login-rightside .container p{
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    font-weight: 400;
+}
 }
