@@ -41,7 +41,7 @@ const ResetPassword = () => {
             <img src={text} alt='image' />
             <form className='form' onSubmit={handleSubmit}>
               <h1>Reset Password</h1>
-              <p>Enter and confirm your new password</p>
+              <p>Enter your new password and confirm</p>
 
               <input
                 type='password'
