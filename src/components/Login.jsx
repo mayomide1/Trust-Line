@@ -61,7 +61,7 @@ const Login = () => {
             />
             {passwordError && <p className='error'>{passwordError}</p>}
 
-            <button type='submit'>Login</button>
+           <Link to="/dashboard" className='link'><button type='submit'>Login</button></Link>
             <span><Link to='/forgot-password' className='link'>Forgot Password</Link></span>
             <p>
               By clicking continue, you agree to our <strong>Terms of Service</strong> and{' '}

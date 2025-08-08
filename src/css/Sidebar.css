@@ -1,0 +1,123 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width:20%;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: center;
+    position: fixed;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}   
+
+.sidebar button{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    color: #001616;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    gap: 15px;
+    padding: 10px 50px;
+    align-items: center;
+    justify-content: flex-start;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar button:hover, 
+.sidebar button:focus{
+    background-color: #837AEF;
+    color: #fff;
+}
+
+.sidebar .nav-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 62vh;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.sidebar .sidebar-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 25vh;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.sidebar .sidebar-bottom .button{
+    width: 95%;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    color: #001616;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    gap: 15px;
+    padding: 10px 50px;
+    align-items: center;
+    justify-content: flex-start;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar .sidebar-bottom .logout{
+    color: #FF0909;
+}
+
+.sidebar .sidebar-bottom .logout:hover{
+    background-color: #FF0909;
+    color: white ;
+}
+
+.sidebar .sidebar-bottom .logout:active{
+    background-color: hsl(0, 100%, 42%);
+    color: hsl(0, 0%, 90%) ; 
+}
+
+button.active {
+    background-color: #837AEF;
+    color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+button.active:hover {
+    background-color: #837AEF;
+    color: #fff;
+}
+
+
+.sidebar.collapsed {
+  width: 10%; /* Small width for icons only */
+}
+
+.sidebar.collapsed button {
+  justify-content: center;
+}
+
+.sidebar.collapsed img.logo-text {
+  display: none;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
