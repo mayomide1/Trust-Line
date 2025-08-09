@@ -1,4 +1,5 @@
 import React from 'react'
+import spongebob from '../assets/spongebob.png'
 import '../css/Searchbar.css'
 import { CiSearch } from "react-icons/ci";
 import { IoMdNotificationsOutline } from "react-icons/io";
@@ -12,7 +13,7 @@ const Searchbar = () => {
     </div>
     <div className='searchbar-right'>
         <div className='notification-icon'><IoMdNotificationsOutline size={30}/></div>
-        <img src='' alt='image' />
+        <img src={spongebob} alt='image' />
     </div>
     </div>
   )

@@ -1,13 +1,14 @@
 .searchbar{
     position: fixed;
-    right: 0;
-    width:80%;
+    right:0;
+    width:85%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     padding:0 50px;
     align-items: center;
-    border: 0.5px solid #D9D9D9;
+    border-bottom: 0.5px solid #D9D9D9;
+    z-index: 1000;
 }
 
 .searchbar .search{
@@ -59,4 +60,16 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+.searchbar .searchbar-right .notification-icon:hover,
+.searchbar .search .search-icon:hover{
+    color: hsl(0, 0%, 20%);
+}
+
+.searchbar .searchbar-right .notification-icon:active,
+.searchbar .searchbar-right .notification-icon:focus,
+.searchbar .search .search-icon:active,
+.searchbar .search .search-icon:focus{
+    color: hsl(0, 0%, 75%);
 }
