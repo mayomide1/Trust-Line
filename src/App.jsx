@@ -13,6 +13,8 @@ import Analytics from './components/Analytics'
 import Zen from './components/Zen'
 import Support from './components/Support'
 import Settings from './components/Settings'
+import UserProfile from './components/UserProfile'
+import Notification from './components/Notification'
 
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/reset-password' element={<ResetPassword />} />
+        <Route path='/user-profile' element={<UserProfile />} />
+        <Route path='/notification' element={<Notification />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/reports' element={<Reports />} />
         <Route path='/incidents' element={<Incidents />} />
