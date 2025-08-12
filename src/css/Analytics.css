@@ -1,0 +1,13 @@
+.analytics{
+    border: 2px solid red;
+    display: flex;
+    position: fixed;
+    top: 80px;
+    left: 15%;
+    flex-direction: column;
+    width: 85%;
+    height: 100vh;
+    font-size: 20px;
+    padding: 10px 20px;
+    overflow-y: scroll;
+}

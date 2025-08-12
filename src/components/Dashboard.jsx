@@ -1,16 +1,22 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import {Chart as ChartJS} from "chart.js/auto";
+import {Bar, Doughnut, Line} from "react-chartjs-2";
 import Sidebar from './Sidebar'
 import Searchbar from './Searchbar'
 import '../css/Dashboard.css'
+
+
 import { FaArrowRightLong } from "react-icons/fa6";
 import { HiDotsHorizontal } from "react-icons/hi";
+import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
+import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
 
 import graph1 from '../assets/graph1.png'
 import graph2 from '../assets/graph2.png'
 import aina from '../assets/aina.png'
 import wade from '../assets/wade.png'
-import piechart1 from '../assets/piechart1.png'
-import piechart2 from '../assets/piechart2.png'
+
 
 const Dashboard = () => {
   return (
@@ -23,7 +29,7 @@ const Dashboard = () => {
       <div className='first-section'>
       <div className='heading'>
         <p>Dashboard</p>
-        <p>Filter</p>
+        <button> <HiOutlineAdjustmentsVertical size={24}/>Filter</button>
       </div>
       <div className='cards'>
       <Dashboardcard 
@@ -68,7 +74,7 @@ const Dashboard = () => {
           <p>Users</p>
           <p>See recent user activities</p>
         </div>
-      <button className='see-all'>See All <FaArrowRightLong/></button>
+     <Link to="/users" className='link'><button className='see-all'>See All <FaArrowRightLong/></button></Link> 
       </div>
 
       <div className='users-body'>
@@ -114,6 +120,7 @@ const Dashboard = () => {
         </table>
       </div>
       </div>
+
       <div className='zen-section'>
         <div className='zen-head'>
         <p>Zen Exercises</p>
@@ -145,41 +152,56 @@ const Dashboard = () => {
       </div>
       </div>
 
-      <div className='right-section'>
-        <div className='reports-overview'>
+<div className='right-section'>
+  <div className='reports-overview'>
           <p>Reports Overview</p>
-          <ReportChart
-          image={piechart1} 
-          text1="Gender-based violence"
-          percent1="40%"
-          text2="Sexual Harrassment"
-          percent2="45%"
-          text3="Rape Issues"
-          percent3="15%"
-          />
-            <div className='divider'></div>
-          <ReportChart
-          image={piechart2} 
-          text1="Pending"
-          percent1="17%"
-          text2="In progress"
-          percent2="25%"
-          text3="Resolved"
-          percent3="43%"
-          text4="Closed"
-          percent4="15%"
-          />
-        </div>
-      </div>
+<Doughnut 
+      data={{
+        labels: ["Gender-based Violence", "Sexual Harrassment", "Rape Issues"],
+        datasets: [
+          {
+            labels: "Report",
+            data: [40, 45, 15],
+            backgroundColor: [
+              "#FF7C33",
+              "#FF3389", 
+              "#A537FB"
+            ],
+            borderRadius: 4
+          }
+        ]
+      }}
+/>
+    <div className='divider'></div>
+<Doughnut 
+  data={{
+  labels: ["Pending", "In Progress", "Resolved", "Closed"],
+  datasets: [
+    {
+      labels: "Report",
+      data: [17, 25, 43, 15],
+      backgroundColor: [
+      "#4ECBB2",
+      "#3DACF5", 
+      "#FED634",
+      "#999999"
+      ],
+      borderRadius: 4
+    }
+  ]
+}}
+/>
+  </div>
+</div>
 
-    <div className='bottom-section'>
+<div className='bottom-section'>
       <div className='reports-section'>
       <div className="reports-head">
         <div className='left'>
           <p>Reports</p>
           <p>See all your reports here</p>
         </div>
-      <button className='see-all'>See All <FaArrowRightLong/></button>
+       <Link to="/Reports" className='link'><button className='see-all'>See All <FaArrowRightLong/></button></Link>
       </div>
       <div className='reports-body'>
         <table>
@@ -205,18 +227,18 @@ const Dashboard = () => {
             <ReportList 
             id="A2051"
             type="Gender-based Violence"
-            status="Pending"
-            color="#EAC400"
-            bgcolor="#EAC4001A"
-            width="135.1px"
+            status="In progress"
+            color="#3DACF5"
+            bgcolor="#3DACF51A"
+            width="90.27px"
             />
             <ReportList 
             id="A2351"
             type="Rape Issues"
-            status="Pending"
+            status="Resolved"
             color="#48C9B0"
             bgcolor="#48C9B01A"
-            width="62.27px"
+            width="100%"
             />
             <ReportList 
             id="A2051"
@@ -279,46 +301,38 @@ function ZenExercise({text, width, color}){
   )
 }
 
-function ReportList({id, type, status, color, bgcolor, width}){
+function ReportList({ id, type, status, color, bgcolor, width }) {
   const today = new Date();
-const formattedDate = today.toLocaleDateString('en-GB', { 
-  day: '2-digit', 
-  month: '2-digit', 
-  year: 'numeric' 
-});
-  return(
-    <>
+  const formattedDate = today.toDateString();
+
+  const progressWidth = (status === "Resolved" || status === "Closed") ? "100%" : width;
+
+  return (
     <tr>
       <td>{id}</td>
       <td>{type}</td>
-      <td style={{color:color, background:bgcolor,}} className='status'>{status}</td>
+      <td 
+        style={{ color: color, background: bgcolor }} 
+        className='status'
+      >
+        {status}
+      </td>
       <td>
         <div className='progress-bar'>
-        <div className='progress' style={{width:width}}></div>
-      </div>
+          <div 
+            className='progress' 
+            style={{ width: progressWidth}}
+          ></div>
+        </div>
       </td>
       <td>{formattedDate}</td>
-      <td className='icon'><HiDotsHorizontal /></td>
-      </tr>
-    </>
-  )
+      <td>
+        <button className='icon'>
+          <HiDotsHorizontal />
+        </button>
+      </td>
+    </tr>
+  );
 }
-
-function ReportChart({image, text1, percent1, text2, percent2, text3, percent3, text4, percent4}){
-  return(
-    <>
-  <div className='report'>
-    <img src={image} alt='chart'/>
-  <ul>
-    <li>{text1}<span>{percent1}</span></li>
-    <li>{text2}<span>{percent2}</span></li>
-    <li>{text3}<span>{percent3}</span></li>
-    <li>{text4}<span>{percent4}</span></li>
-  </ul>
-  </div>
-    </>
-  )
-}
-
 
 export default Dashboard 
