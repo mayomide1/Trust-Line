@@ -10,4 +10,7 @@
 .link{
   text-decoration: none;
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
+

@@ -122,3 +122,8 @@ button.active:hover {
   align-items: center;
   gap: 10px;
 }
+
+
+.collapse{
+    margin: 0 auto;
+}

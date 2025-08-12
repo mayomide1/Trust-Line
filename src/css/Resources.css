@@ -1,0 +1,326 @@
+.resources{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: fixed;
+    top: 80px;
+    left: 15%;
+    flex-direction: column;
+    width: 85%;
+    height: 100vh;
+    font-size: 20px;
+    padding: 10px 20px;
+    overflow-y: scroll;
+}
+
+.resources .left-side{
+    width: 405px;
+    height: auto;
+    padding: 10px;
+}
+
+.resources .left-side .left-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resources .left-side .left-header p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.resources .left-side .left-header button{
+    font-size: 16px;
+    font-weight: 500;
+    color: #001616;
+    border: none;
+    border-radius: 8px;
+    background-color: #837AEF;
+    color: #fff;
+    width: 115px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.resources .left-side .left-header button:active{
+    background-color: #828282;
+}
+
+.resources .left-side .files{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.resources .left-side .files .file{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    height: 78px;
+}
+
+.resources .left-side .files .file:hover{
+    box-shadow: 0 2px 4px 0 #41414126;
+}
+
+.files .file .file-left{
+    width: 15%;
+    height: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.files .file .file-right{
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.files .file .file-right p:first-of-type{
+    font-size: 18.5px;
+    font-weight: 500;
+    color: #000;
+}
+
+.files .file .file-right p:last-of-type{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding-left: 5px;
+}
+
+.files .file .file-right .file-size,
+.files .file .file-right .date{
+    font-size: 14px;
+    font-weight: 400;
+    color: #828282;
+}
+
+
+.resources .right-side{
+    width: 690px;
+    box-shadow: 0 2px 4px 0 #41414126;
+    padding: 10px;
+}
+
+.right-side .right-header .icon{
+    cursor: pointer;
+}
+
+.right-side .right-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.right-side .right-header p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.right-side .right-header .header-right{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.right-side .right-body{
+    padding: 10px;
+}
+
+.right-side .right-body h1{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.right-side .right-body p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+    display: flex;
+}
+
+/* Add File Modal */
+.modal-overlay {
+  position: fixed;
+  top: 80px;
+  left: 15%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.add-new-file{
+    width: 40%;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+    top: -50px;
+    left: -50px
+}
+
+.add-new-file .header{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+.add-new-file .header .back{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-new-file .header p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.add-new-file form{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    width: 100%;
+}
+
+.add-new-file form label{
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.add-new-file form input:first-of-type{
+    margin-top: 0px;
+}
+
+.add-new-file form textarea{
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.add-new-file form select{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    height: 54px;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add-new-file form input:last-of-type{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.success-popup{
+    width: 40%;
+    position: relative;
+    top: -100px;
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.success-popup img{
+    margin: 50px 0 20px 0;
+}
+
+.success-popup p:first-of-type{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.success-popup p:last-of-type{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.delete-popup{
+    width: 40%;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    top: -100px;
+    left: -110px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.delete-popup .close-icon{
+    width: 100%;
+    cursor: pointer;
+}
+
+.delete-popup p:first-of-type{
+    font-size: 24px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.delete-popup p:last-of-type{
+    font-size: 14px;
+    font-weight: 500;
+    color: #001616;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-popup .buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.delete-popup .buttons button{
+    width: 244px;
+    height: 52px;
+    border: 1px solid red;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.delete-popup .buttons button:first-of-type{
+    color: #FF3B30;
+    border: 1px solid #FF3B30;
+    background-color: #fff;
+} 
+
+.delete-popup .buttons button:last-of-type{
+    background-color: #FF3B30;
+    color: #fff;
+} 
