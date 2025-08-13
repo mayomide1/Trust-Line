@@ -1,8 +1,108 @@
-.profile-container .reports{
+.profile-container .profile{
     width: 85%;
     height: 100vh;
     position: fixed;
     overflow-y: scroll;
     top: 80px;
     left: 15%;
+    padding: 20px;
+}
+
+.pro-file{
+    box-shadow: 0 8px 8px 0 #0000000D;
+    margin-bottom: 100px;
+    border-radius: 10px;
+
+}
+
+.profile .banner img{
+    width: 100%;
+}
+
+.profile .profile-pic{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    left: 30px;
+}
+
+.profile .user-info{
+    margin-top: -60px;
+    padding-left: 30px;
+}
+
+.profile .user-info p:first-of-type{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.profile .user-info .position{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.profile .user-info p:last-of-type{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.profile .user-info p:last-of-type span{
+    font-size: 20px;
+    font-weight: 500;
+    color: #001616;
+}
+
+.profile .contact-info{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #D9D9D9;
+}
+
+.profile .contact-info p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.profile .contact-info p:first-of-type{
+    font-weight: 600;
+}
+
+.profile .contact-info p span:first-of-type{
+    color: #828282;
+}
+
+.profile .account-info{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #D9D9D9;
+}
+
+.profile .account-info p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.profile .account-info p:first-of-type{
+    font-weight: 600;
+}
+
+.profile .account-info p span:first-of-type{
+    color: #828282;
 }

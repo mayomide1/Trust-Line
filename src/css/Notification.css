@@ -1,8 +1,115 @@
-.notification-container .reports{
+.notification-container .notifi-cation{
     width: 85%;
     height: 100vh;
     position: fixed;
     overflow-y: scroll;
     top: 80px;
     left: 15%;
+    padding: 10px;
 }
+
+.notification{
+    margin-bottom: 100px;
+}
+
+.notification .notification-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.notification .notification-header p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.notification .notification-header .buttons{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.notification .notification-header .buttons button{
+    border: 0.5px solid #E0E0E0;
+    display: flex;
+    width: 101px;
+    height: 38px;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.notification .notification-header .buttons button:hover{
+    background-color: #837AEF;
+    color: #fff;
+}
+
+.notification .today, 
+.notification .yesterday{
+    padding: 10px;
+}
+
+.notification .today .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.notification .today .header p,
+.notification .yesterday .header p{
+    font-size: 20px;
+    font-weight: 500;
+    color: #828282;
+}
+
+.notification .today .header button{
+    font-size: 20px;
+    font-weight: 500;
+    color: #837AEF;
+    background-color: #fff;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.notification .today .header button:hover{
+    background-color: #837AEF;
+    color: #fff;
+}
+
+.notification .message{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px 0 #41414126;
+    cursor: pointer;
+}
+
+.notification  .message .message-content{
+    width: 100%;
+}
+
+.notification .message .message-content p:first-of-type {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notification .message .message-content p:last-of-type {
+    font-size: 13px;
+    font-weight: 400;
+}
+ 
