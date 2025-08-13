@@ -3,6 +3,7 @@ import spongebob from '../assets/spongebob.png'
 import '../css/Searchbar.css'
 import { CiSearch } from "react-icons/ci";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 const Searchbar = () => {
   return (
@@ -12,8 +13,8 @@ const Searchbar = () => {
         <div className='search-icon'><CiSearch size={30}/></div>
     </div>
     <div className='searchbar-right'>
-        <div className='notification-icon'><IoMdNotificationsOutline size={30}/></div>
-        <img src={spongebob} alt='image' />
+        <Link to="/notification" className="link"><div className='notification-icon'><IoMdNotificationsOutline size={30}/></div></Link>
+       <Link to="/user-profile" className="link"> <img src={spongebob} alt='image' /></Link>
     </div>
     </div>
   )

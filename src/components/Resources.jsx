@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/Resources.css';
 import Sidebar from './Sidebar';
 import Searchbar from './Searchbar';
@@ -18,12 +18,21 @@ const Resources = () => {
   const [isAddFileOpen, setIsAddFileOpen] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [editFileId, setEditFileId] = useState(null);
-  const [resources, setResources] = useState([]);
+  const [resources, setResources] = useState(() => {
+    const saved = localStorage.getItem("resources");
+    return saved ? JSON.parse(saved) : [];
+  });
   const [newFile, setNewFile] = useState({ title: "", category: "", content: "" });
   const [selectedResource, setSelectedResource] = useState(null);
   const [isSuccessPopupOpen, setIsSuccessPopupOpen] = useState(false)
   const [isDeletePopupOpen, setIsDeletePopupOpen] = useState(false)
 
+
+  useEffect(() => {
+    localStorage.setItem("resources", JSON.stringify(resources));
+  }, [resources]);
+
+  
   function handleOpenAddfile() {
     setIsAddFileOpen(true);
   }
