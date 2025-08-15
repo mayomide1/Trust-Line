@@ -7,6 +7,50 @@ import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
 import { IoIosRefresh } from "react-icons/io";
 
 const Incidents = () => {
+  const newReportHead =["CaseNo", "Type", "Date"]
+  const newReportContent =[
+  {
+    id:"A1208",
+    type:"Sexual Harrassment"
+  },
+  {
+    id:"A2051",
+    type:"Gender-based Violence"
+  },
+  {
+    id:"A2351",
+    type:"Rape Issues"
+  },
+  {
+    id:"A2351",
+    type:"Rape Issues"
+  },
+]
+
+  const ongoingCasesHead = ["CaseNo", "Type", "Date", "Status", "Tracking"]
+  const OngoingCasesContent = [
+    {
+      id:"A1208",
+      type:"Sexual Harrassment",
+      text:"Questioning of victims",
+    },
+    { 
+      id:"A2051",
+      type:"Gender-based Violence",
+      text:"Referring of victims for selfcare/checkup"
+    },
+    {
+      id:"A2351",
+      type:"Rape Issues",
+      text:"Referring of victims for selfcare/checkup"
+    },
+    { 
+      id:"A2351",
+      type:"Rape Issues",
+      text:"Referring of victims for selfcare/checkup"
+    }
+  ]
+
   return (
     <div className='incidents-container'>
       <Searchbar />
@@ -26,29 +70,19 @@ const Incidents = () => {
         <table>
           <thead>
             <tr>
-              <th>Case No.</th>
-              <th>Type</th>
-              <th>Date</th>
-              <th></th>
+            {newReportHead.map((value, index) => (
+              <th key={index}>{value}</th>
+            ))}
             </tr>
           </thead>
           <tbody>
-            <Newreport 
-              id="A1208"
-              type="Sexual Harrassment"
+          {newReportContent.map((value, index) => (
+            <Newreport
+              key={index}
+              id={value.id}
+              type={value.type}
             />
-            <Newreport 
-              id="A2051"
-              type="Gender-based Violence"
-            />
-            <Newreport 
-              id="A2351"
-              type="Rape Issues"
-            />
-            <Newreport 
-              id="A2351"
-              type="Rape Issues"
-            />
+          ))}
           </tbody>
         </table>
       </div>
@@ -60,34 +94,20 @@ const Incidents = () => {
         <table>
           <thead>
             <tr>
-              <th>Case No.</th>
-              <th>Type</th>
-              <th>Date</th>
-              <th>Status</th>
-              <th>Tracking</th>
+              {ongoingCasesHead.map((value, index) => (
+                <th key={index}>{value}</th>
+              ))}
             </tr>
           </thead>
           <tbody>
+          {OngoingCasesContent.map((value, index) => (
             <OngoingCases 
-              id="A1208"
-              type="Sexual Harrassment"
-              text="Questioning of victims"
+              key={index}
+              id={value.id}
+              type={value.type}
+              text={value.text}
             />
-            <OngoingCases 
-              id="A2051"
-              type="Gender-based Violence"
-              text="Referring of victims for selfcare/checkup"
-            />
-            <OngoingCases 
-              id="A2351"
-              type="Rape Issues"
-              text="Referring of victims for selfcare/checkup"
-            />
-            <OngoingCases 
-              id="A2351"
-              type="Rape Issues"
-              text="Referring of victims for selfcare/checkup"
-            />
+            ))}
           </tbody>
         </table>
       </div>

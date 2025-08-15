@@ -233,7 +233,7 @@ function handleAddOrEditFile(e) {
 };
 
 function Resource({ title, onClick }) {
-  const date = new Date().toLocaleString();
+  const date = new Date().toLocaleDateString();
   const truncatedTitle = title.length > 25 ? title.slice(0, 25) + "..." : title;
 
   return (
