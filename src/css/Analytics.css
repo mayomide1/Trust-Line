@@ -1,5 +1,4 @@
 .analytics{
-    border: 2px solid red;
     display: flex;
     position: fixed;
     top: 80px;
@@ -10,4 +9,235 @@
     font-size: 20px;
     padding: 10px 20px;
     overflow-y: scroll;
+}
+
+.analytic{
+    margin-bottom: 100px;
+}
+
+.analytics .first-section{
+    padding: 20px;
+}
+
+.analytics .first-section .cards{
+    display: flex;
+    gap: 20px;
+}
+
+
+/* SECOND */
+.analytics .second-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.analytics .second-section .left{
+    width: 70%;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px 0 #41414126;
+    background-color: #fff;
+}
+
+.analytics .second-section .left .left-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border: 2;
+}
+
+.analytics .second-section .left .left-header p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.analytics .second-section .left .left-header select{
+    font-size: 15px;
+    font-weight: 500;
+    color: #001616;
+    border: 0.5px solid #E0E0E0DD;
+    border-radius: 4px;
+    width: 110px;
+    height: 32px;
+}
+
+.analytics .second-section .left .monthly,
+.analytics .second-section .left .weekly{
+    padding: 10px;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.analytics .right{
+    width: 28%;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px 0 #41414126;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.analytics .right .bar-chart .right-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.analytics  .right .bar-chart .right-header .header-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.analytics .right .bar-chart .right-header .header-left p:first-of-type{
+    font-size: 20px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.analytics .right .bar-chart .right-header .header-left p:last-of-type{
+    font-size: 16px;
+    font-weight: 400;
+    color: #001616;
+}
+
+.analytics .right .bar-chart .right-header select{
+    width: 103px;
+    height: 32px;
+    border: 1px solid #E0E0E0DD;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.analytics .right .bar-chart .chart{
+    height: 300px;
+}
+
+/* THIRD SECTION */
+
+.analytics .third-section{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.third-section .left{
+    width: 70%;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px 0 #41414126;
+    background-color: #fff;
+}
+
+.third-section .left .left-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.third-section .left .left-header p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.third-section .left .left-header select{
+    width: 103px;
+    height: 32px;
+    border: 1px solid #E0E0E0DD;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.third-section .location{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.third-section .location img{
+    width: 65%;
+    height: 250px;
+}
+
+.third-section .location .location-right{
+    width: 32%;
+    height: 300px;
+}
+
+.third-section .location .location-right .progress{ 
+    margin-bottom: 10px;
+}
+
+.third-section .location .location-right .progress p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #001616;
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-section .location .location-right .progress p span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #001616;
+}
+
+
+.third-section .location .location-right .progress .progress-bar{
+    width: 100%;
+    background-color: #E0E0E0;
+    border-radius: 42px;
+    height: 6px;
+}
+
+.third-section .location .location-right .progress .progress-bar .inner{
+    background-color: #837AEF;
+    border-radius: 42px;
+    height: 6px;
+}
+
+.third-section .level{
+    padding: 10px;
+}
+
+.third-section .level .progress{
+    margin-bottom: 10px;
+}
+
+.third-section .level p{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.third-section .level p span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #001616;
+}
+
+.third-section .level .progress-bar{
+    width: 100%;
+    background-color: #E0E0E0;
+    border-radius: 42px;
+    height: 6px;
+}
+
+.third-section .level .progress-bar .inner{
+    background-color: #837AEF;
+    border-radius: 42px;
+    height: 6px;
+    /* width: 80%; */
 }

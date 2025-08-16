@@ -66,7 +66,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 1px solid #D9D9D9;
+    border-top: 1px solid #D9D9D9;
 }
 
 .profile .contact-info p{
@@ -89,7 +89,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 1px solid #D9D9D9;
+    border-top: 1px solid #D9D9D9;
 }
 
 .profile .account-info p{

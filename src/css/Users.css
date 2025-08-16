@@ -1,5 +1,4 @@
 .users{
-    border: 2px solid red;
     display: flex;
     position: fixed;
     top: 80px;
@@ -10,4 +9,196 @@
     font-size: 20px;
     padding: 10px 20px;
     overflow-y: scroll;
+}
+
+.users .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.users .header p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.users .header .buttons{
+    width: 100%;
+    display: flex;
+    margin-right: 10px;
+    gap: 30px;
+}
+
+.users .header .buttons button{
+    width: 160px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.users .header .buttons button:first-of-type{
+    color: #FFFFFF;
+    background-color: #837AEF;
+
+}
+
+.users .header .buttons button:first-of-type:hover{
+    color: #001616;
+    background-color: #FFFFFF;
+    border: 0.5px solid #E0E0E0;
+}
+
+.users .header .buttons button:first-of-type:active{
+    color: #FFFFFF;
+    background-color: hsl(245, 79%, 71%);
+}
+
+.users .header .buttons button:last-of-type{
+    border: 0.5px solid #E0E0E0;
+    background-color: #fff;
+    display: flex;
+    gap: 5px;
+}
+
+.users .header .buttons button:last-of-type:hover{
+    color: #FFFFFF;
+    background-color: #837AEF;
+}
+
+.users .header .buttons button:last-of-type:active{
+        background-color: #fff;
+}
+
+.users .new-users{
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 #41414126;
+    padding: 10px;
+}
+
+.users  .head{
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+.users .head p{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 600;
+    color: #001616;
+}
+
+.users  .head p span{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 400;
+    color: #001616;
+}
+
+.users  .head button{
+    width: 86px;
+    height: 40px;
+    border: 0.5px solid #E0E0E0;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    color: #001616;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.users  .head button:hover{
+    color: #fff;
+    background-color: #837AEF;
+}
+
+.users .head button:active{
+    color: #001616;
+     background-color: #FFFFFF;
+}
+
+.users table{
+    width: 100%;
+}
+
+.users  table th{
+    font-size: 16px;
+    font-weight: 400;
+    color: #828282;
+    text-align: center;
+    padding: 5px;
+}
+
+.users  table th:first-of-type{
+    text-align: left;
+}
+
+.users  table td{
+  font-size: 16px;
+  font-weight: 400;
+  color: #001616;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #E0E0E0;
+  vertical-align: middle;
+}
+
+.users .name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #001616;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.users .name img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.users .details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.users .details:hover{   
+    background-color: #837AEF;
+    color: #fff;
+}
+
+.users .details:active{   
+    background-color: hsl(245, 79%, 61%);
+    color: #fff;
+}
+
+.users .every-user{
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 #41414126;
+    padding: 20px 10px;
+    margin-bottom: 100px;
 }

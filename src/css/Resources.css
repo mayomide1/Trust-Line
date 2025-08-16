@@ -64,6 +64,12 @@
     background-color: #fff;
     border: none;
     height: 78px;
+      border-top: 1px solid #E0E0E0;
+}
+
+.resources .left-side .files .file:hover{
+    background-color: #837AEF;
+    color: #fff;
 }
 
 .resources .left-side .files .file:hover{

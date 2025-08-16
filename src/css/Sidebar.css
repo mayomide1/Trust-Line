@@ -8,7 +8,6 @@
     text-align: center;
     gap: 10px;
     position: fixed;
-    /* box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); */
     padding: 5px;
 }   
 
@@ -28,7 +27,6 @@
     padding: 10px 40px;
     align-items: center;
     justify-content: flex-start;
-    transition: background-color 0.2s ease;
 }
 
 .sidebar button:hover, 

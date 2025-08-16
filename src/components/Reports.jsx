@@ -31,6 +31,58 @@ function handleSortClose(){
 }
 
 
+  const tableHead = ["CaseNo","Type", "Status", "Tracking", "Date"];
+  const tableContent=[
+    {
+      id:"A1208",
+      type:"Sexual Harrassment",
+      status:"Pending",
+      color:"#EAC400",
+      bgcolor:"#EAC4001A",
+      width:"35.88px",
+    },
+    {
+      id:"A2051",
+      type:"Gender-based Violence",
+      status:"In progress",
+      color:"#3DACF5",
+      bgcolor:"#3DACF51A",
+      width:"90.27px",
+    },
+    {
+      id:"A2351",
+      type:"Rape Issues",
+      status:"Resolved",
+      color:"#48C9B0",
+      bgcolor:"#48C9B01A",
+      width:"100%",
+    },
+    {
+      id:"A2051",
+      type:"Gender-based Violence",
+      status:"Pending",
+      color:"#EAC400",
+      bgcolor:"#EAC4001A",
+      width:"62.27px",
+    },
+    {
+      id:"A2051",
+      type:"Gender-based Violence",
+      status:"Pending",
+      color:"#EAC400",
+      bgcolor:"#EAC4001A",
+      width:"62.27px",
+    },
+    {
+      id:"A2051",
+      type:"Gender-based Violence",
+      status:"Pending",
+      color:"#EAC400",
+      bgcolor:"#EAC4001A",
+      width:"62.27px",
+    },
+  ]
+
   return (
     <>
     <div className='reports-container'>
@@ -49,56 +101,23 @@ function handleSortClose(){
         <table>
           <thead>
             <tr>
-              <th>Case No.</th>
-              <th>Type</th>
-              <th>Status</th>
-              <th>Tracking</th>
-              <th>Date</th>
-              <th></th>
+              {tableHead.map((value, index) => (
+                <th key={index}>{value}</th>
+              ))}
             </tr>
           </thead>
           <tbody>
-            <ReportList 
-            id="A1208"
-            type="Sexual Harrassment"
-            status="Pending"
-            color="#EAC400"
-            bgcolor="#EAC4001A"
-            width="35.88px"
+            {tableContent.map((value, index)=> (
+              <ReportList
+                key={index}
+                id={value.id}
+                type={value.type}
+                status={value.status}
+                color={value.color}
+                bgcolor={value.bgcolor}
+                width={value.width}
             />
-            <ReportList 
-            id="A2051"
-            type="Gender-based Violence"
-            status="In progress"
-            color="#3DACF5"
-            bgcolor="#3DACF51A"
-            width="70.27px"
-            />
-            <ReportList 
-            id="A2351"
-            type="Rape Issues"
-            status="Resolved"
-            color="#48C9B0"
-            bgcolor="#48C9B01A"
-            width="100%"
-            />
-            <ReportList 
-            id="A2051"
-            type="Gender-based Violence"
-            status="Pending"
-            color="#EAC400"
-            bgcolor="#EAC4001A"
-            width="62.27px"
-            />
-
-            <ReportList 
-            id="A2051"
-            type="Gender-based Violence"
-            status="Closed"
-            color="#999999"
-            bgcolor="#9999991A"
-            width="100%"
-            />
+            ))}
           </tbody>
         </table>
       </div>
