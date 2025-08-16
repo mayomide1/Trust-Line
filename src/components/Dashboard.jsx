@@ -87,6 +87,41 @@ const Dashboard = () => {
     },
   ]
 
+const Dashboard = [
+  {
+    text:"new users",
+    number:"20",
+    percent:"+15",
+    image:graph1,
+    color:"#48C9B0",
+    bgcolor:"#48C9B01A"
+  },
+  {
+    text:"new reports",
+    number:"17",
+    percent:"-0.15",
+    image:graph2,
+    color:"#FF0909",
+    bgcolor:"#FF09091A",
+  },
+  {
+    text:"total users",
+    number:"205",
+    percent:"+15",
+    image:graph1,
+    color:"#48C9B0",
+    bgcolor:"#48C9B01A",
+  },
+  {
+    text:"total reports",
+    number:"317",
+    percent:"+15",
+    image:graph1,
+    color:"#48C9B0",
+    bgcolor:"#48C9B01A",
+  }
+]
+
   return (
     <div className="dashboard-container">
       <Sidebar />
@@ -103,38 +138,17 @@ const Dashboard = () => {
             </button>
           </div>
           <div className="cards">
-            <Dashboardcard
-              text="new users"
-              number="20"
-              percent="+15"
-              image={graph1}
-              color="#48C9B0"
-              bgcolor="#48C9B01A"
-            />
-            <Dashboardcard
-              text="new reports"
-              number="17"
-              percent="-0.15"
-              image={graph2}
-              color="#FF0909"
-              bgcolor="#FF09091A"
-            />
-            <Dashboardcard
-              text="total users"
-              number="205"
-              percent="+15"
-              image={graph1}
-              color="#48C9B0"
-              bgcolor="#48C9B01A"
-            />
-            <Dashboardcard
-              text="total reports"
-              number="317"
-              percent="+15"
-              image={graph1}
-              color="#48C9B0"
-              bgcolor="#48C9B01A"
-            />
+        {Dashboard.map((value, index) => (
+          <Dashboardcard
+            key={index} 
+            text={value.text}
+            number={value.number}
+            percent={value.percent}
+            image={value.image}
+            color={value.color}
+            bgcolor={value.bgcolor}
+          />
+        ))}
           </div>
         </div>
 
